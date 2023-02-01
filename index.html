@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepsi Website</title>
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="#"><img src="/img/logo.png" alt="logo" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Newsletters</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>That's What <br><span>I like</span></h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s</p>
+                <a href="#">Olhar todos os Produtos</a>
+            </div>
+            <div class="imgBox">
+                <img src="/img/pepsi001.png" alt="Pepsi lata azul" class="pepsi">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="/img/pepsi001.png" onclick="imgSlider('/img/pepsi001.png'); changeBgColor('#0062be')" alt="pepsi azul"></li>
+            <li><img src="/img/pepsi002.png" onclick="imgSlider('/img/pepsi002.png'); changeBgColor('#e60c2c')" alt="pepsi branca"></li>
+            <li><img src="/img/pepsi003.png" onclick="imgSlider('/img/pepsi003.png'); changeBgColor('#1e1e1e')" alt="pepsi preta"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="/img/facebook.png" alt="facebook logo"></a></li>
+            <li><a href="#"><img src="/img/twitter.png" alt="twitter logo"></a></li>
+            <li><a href="#"><img src="/img/instagram.png" alt="instagram logo"></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.pepsi').src = anything;
+        }
+        function changeBgColor(color){
+            const sec = document.querySelector('.sec');
+            sec.style.background = color;
+        }
+    </script>
+
+</body>
+</html>
